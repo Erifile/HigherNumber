@@ -1,0 +1,52 @@
+*
+{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header
+{
+  width: 80vw;
+  background-color: wheat;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 12px;
+}
+.inputs
+{
+  width: 80vw;
+  height: 40vh;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputs label, .mainNumWrap, .numWrap
+{
+  width: 70%;
+  height: 25%;
+  border: 1px solid;
+  font-size: larger;
+  align-content: center;
+}
+
+.inputs .mainNumWrap, .numWrap
+{
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainNumWrap input, .numWrap input
+{
+  width: 80%;
+  height: 80%;
+  font-size: 200%;
+}
