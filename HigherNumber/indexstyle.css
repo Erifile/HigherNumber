@@ -1,0 +1,147 @@
+*
+{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header: wheat;
+  --div-color: rgb(206, 175, 99);
+}
+
+/* Тёмная тема при настройках ОС или браузера */
+@media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --header: rgb(124, 111, 86);
+      --div-color: rgb(104, 89, 48);
+    }
+}
+
+body
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+}
+header
+{
+  width: 80vw;
+  background-color: var(--header);
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 12px;
+}
+.formWrap
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  gap: 10px;
+}
+form
+{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 100%;
+  height: 45vh;
+  gap: 10px;
+}
+.inputs
+{
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputs label, .mainNumWrap, .numWrap
+{
+  width: 100%;
+  height: 25%;
+  border: 1px solid;
+  font-size: 1.5rem;
+  align-content: center;
+}
+.inputs label
+{
+  padding: 5px;
+}
+
+.inputs .mainNumWrap, .numWrap
+{
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.mainNumWrap input, .numWrap input
+{
+  width: 80%;
+  height: 80%;
+  font-size: 200%;
+}
+
+.resultWrap
+{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  font-size: 1.5rem;
+}
+
+.numsList
+{
+  white-space: pre-line; /* для работы \n внутри .textContent */
+  word-break: break-all; /* принудительный перенос с разрывом слова/числа */
+  background-color: var(--div-color);
+  padding: 5px;
+}
+.result
+{
+  white-space: pre-line; /* для работы \n внутри .textContent */
+}
+
+.errors
+{
+  display: none;
+  position: fixed;
+  opacity: 0;
+  width: auto;
+  transition: all 0.15s ease allow-discrete;
+  height: 8vh;
+  padding: 5px;
+  justify-self: center;
+  align-items: center;
+  top: 30%;
+  background-color: var(--header);
+  border: 1px solid rgb(187, 59, 59);
+  border-radius: 1rem;
+}
+.show {
+  display: flex;
+  opacity: 1;
+}
+@starting-style
+{
+  .show
+  {
+    opacity: 0;
+  }
+}
